@@ -1,0 +1,68 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: beige;
+    margin: 0;
+    padding-top: 30px;
+}
+
+.chessboard {
+    width: 520px;
+    height: 520px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    background: black;
+    border: 5px solid black;
+    
+}
+
+.chessboard div {
+    background: black;
+    border: 1px solid white;
+}
+
+.chessboard div:nth-child(12n + 1),
+.chessboard div:nth-child(12n + 3),
+.chessboard div:nth-child(12n + 5),
+.chessboard div:nth-child(12n + 8),
+.chessboard div:nth-child(12n + 10),
+.chessboard div:nth-child(12n + 12) {
+    background: white;
+}
+.chessboard div {
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 10px black;
+}
+
+.chessboard div img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size:50px;
+}
